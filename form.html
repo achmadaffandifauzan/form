@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form Creator</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <div id="createForm">
+            <h1>
+                Create Form
+            </h1>
+            <h2>
+                Question
+            </h2>
+            <div id="questionCreate">
+                <textarea id="inputQuestion" rows="4" spellcheck="false"></textarea>
+            </div>
+            <h2>
+                Answer
+            </h2>
+            <!--
+            <button id="answerTypePilgan">Pilgan</button>
+            <button id="answerTypeIsian">Isian</button>
+            -->
+            <div id="answerCreate">
+                <input type="text" class="inputAnswer" spellcheck="false">
+            </div>
+            <div class="buttonContainer">
+                <button id="addInputAnswer" onclick="addInputAnswer()">More Answer</button>
+                <button id="removeInputAnswer" onclick="removeInputAnswer()">Less Answer</button>
+            </div>
+            <div class="buttonContainer">
+                <button id="createBtn" onclick="createForm(event)">Create</button>
+            </div>
+
+            <!--
+            <button id="deleteBtn">Delete Question</button>
+            -->
+        </div>
+        <div id="outputForm">
+            <h1>Form</h1>
+            <div class="formEx">
+                <div class="radio_checkbox">
+                    <button onclick="changeToRadio(event)">Radio</button>
+                    <button onclick="changeToCheckbox(event)">Checkbox</button>
+                </div>
+                <div class="questionFormEx">
+                    (Example) Question 1
+                </div>
+                <div class="answerFormEx">
+                    <div class="divChoiceAnswer">
+                        <input type="radio" name="answerQ1" id="exAns1" class="inputAnsForm" value="answerV_1" />
+                        <label for="exAns1">Answer 1</label>
+                    </div>
+                    <div class="divChoiceAnswer">
+                        <input type="radio" name="answerQ1" id="exAns2" class="inputAnsForm" value="answerV_2" />
+                        <label for="exAns2">Answer 2</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="submitFormBtn" onclick="submitForm(event)">Submit Form</button>
+    </main>
+    <script src="form.js"></script>
+</body>
+
+</html>
